@@ -1,0 +1,10 @@
+# dsh-code-ui — bundle patch layer.
+#
+# Installing this package into a profile (`dsh plugin --profile <name> add dsh-code-ui`)
+# appends it to `dsh.profile.bundles`; this patch is then applied as that
+# bundle's layer. The row below loads the package's main entry (lib/index.js)
+# as the host half, and because the package declares `dsh.client`, the web
+# app also loads its `./client` bundle as the browser half.
+- insert:
+    - id: dsh-code-ui
+      name: dsh-code-ui

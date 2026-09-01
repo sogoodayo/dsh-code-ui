@@ -1,0 +1,44 @@
+# dependencies
+node_modules/
+
+# build output (tsdown æ‰“åŒ…äº§ç‰© lib/ æ„å»ºç”Ÿæˆçš„ä¸´æ—¶å­é¡¹ï¼›æ‰‹å†™ lib/index.js ä¸ lib/client.js æ˜¯æäº¤çš„æºç )
+lib/typert.*.js
+lib/types/
+dist/
+
+# logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# editor / IDE
+.vscode/
+.idea/
+
+# env
+.env
+.env.*
+!.env.example
+
+# test coverage
+coverage/
+
+# TypeScript build info
+*.tsbuildinfo
+_cordis.*.txt
+# build & temp artifacts
+_out/
+_outh/
+_bundle.*.txt
+__bundle*.js
+_legacy-src/
+
+# npm Æ¾¾İ£¨º¬ authToken£¬¾ø²»ÄÜÌá½»£©Óë±¾»úÁÙÊ±±¸Íü
+.npmrc
+.md
