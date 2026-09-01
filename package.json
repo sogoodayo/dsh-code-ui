@@ -1,6 +1,6 @@
 {
   "name": "dsh-code-ui",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "description": "Cursor 风格的 AI 代码编辑器工作台插件（DSH）：文件树、多标签页编辑、引用/备注/翻译、内嵌 AI 输入框、语法高亮",
   "type": "module",
   "main": "lib/index.js",
