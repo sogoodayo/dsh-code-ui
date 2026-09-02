@@ -102,15 +102,6 @@ dsh-code-ui/
 - `lib/client.js`：改编辑器 UI 布局、配色（`styles` 模板串里的 CSS）、或新增右键菜单项
 - 引用/备注数据存模块内存（运行期有效，重启清空）
 
-## 发布
-
-```bash
-npm publish --dry-run
-npm publish
-```
-
-发布前确认 `name` 未被占用，必要时改为 scope 如 `@yourname/dsh-code-ui`。
-
 ## 更新日志
 
 > 约定：每次版本升级在本节顶部追加一行（时间 | 版本 | 修复/新增内容）。
