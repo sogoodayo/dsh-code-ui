@@ -4,6 +4,22 @@
 
 它把 Cursor 那种「边看代码、边跟 AI 对话」的体验搬进 DSH：一个带活动栏、文件树、多标签页编辑器的代码工作区。**v1.2.0 起支持两种布局**：右侧停靠（code UI 固定占屏幕右侧、与聊天并排，默认）或悬浮窗口（可拖拽浮动窗口，内嵌 AI 输入框），插件卡片里可随时切换。
 
+## 界面一览
+
+**右侧停靠布局（默认）**——对话与 code UI 左右并排，边聊边看代码：
+
+![右侧停靠布局：对话与 code UI 左右并排](https://github.com/soGoodayo/dsh-code-ui/raw/main/image/%E4%B8%8A%E4%B8%8B%E6%96%87%E4%B8%8EcodeUI%20%E5%B7%A6%E5%8F%B3%E5%B8%83%E5%B1%80.png)
+
+**悬浮窗口布局**——可拖拽、可缩放的浮动编辑器窗口，内嵌 AI 输入框：
+
+![悬浮窗口布局](https://github.com/soGoodayo/dsh-code-ui/raw/main/image/%E6%82%AC%E6%B5%AE%E5%B8%83%E5%B1%80.png)
+
+**两种切换按钮（插件卡片「切换按钮」可选）**——点击在 code UI 与 dsh UI（DSH 原生界面）之间切换，与布局任意组合：
+
+| 会话头按钮（默认） | 悬浮模式条（可拖动） |
+| :---: | :---: |
+| ![会话头 ⌨ code UI 按钮](https://github.com/soGoodayo/dsh-code-ui/raw/main/image/%E4%BC%9A%E8%AF%9D%E5%A4%B4%E6%8C%89%E9%92%AE.png) | ![悬浮模式条](https://github.com/soGoodayo/dsh-code-ui/raw/main/image/%E6%82%AC%E6%B5%AE%E6%8C%89%E9%92%AE.png) |
+
 ## 功能
 
 - **双布局可选**：右侧停靠（默认，与聊天并排） / 悬浮窗口（可拖拽缩放），插件卡片切换、即时生效
