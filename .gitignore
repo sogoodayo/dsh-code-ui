@@ -42,3 +42,5 @@ _legacy-src/
 # npm 凭据（含 authToken，绝不能提交）与本机临时备忘
 .npmrc
 .md
+
+_pack-cache/
