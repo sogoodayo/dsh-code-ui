@@ -1,0 +1,711 @@
+/*! highlight.js 11.12.0 精选主题（tools/vendor-hljs.mjs 生成, 勿手改） */
+
+/* ===== github ===== */
+.cdex-syn-github pre code.hljs{
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}.cdex-syn-github code.hljs{
+  padding: 3px 5px
+}/*!
+  Theme: GitHub
+  Description: Light theme as seen on github.com
+  Author: github.com
+  Maintainer: @Hirse
+  Updated: 2021-05-15
+
+  Outdated base version: https://github.com/primer/github-syntax-light
+  Current colors taken from GitHub's CSS
+*/
+.hljs{
+  color: #24292e;
+  background: #ffffff
+}.cdex-syn-github .hljs-doctag, .cdex-syn-github .hljs-keyword, .cdex-syn-github .hljs-meta .hljs-keyword, .cdex-syn-github .hljs-template-tag, .cdex-syn-github .hljs-template-variable, .cdex-syn-github .hljs-type, .cdex-syn-github .hljs-variable.language_{
+  /* prettylights-syntax-keyword */
+  color: #d73a49
+}.cdex-syn-github .hljs-title, .cdex-syn-github .hljs-title.class_, .cdex-syn-github .hljs-title.class_.inherited__, .cdex-syn-github .hljs-title.function_{
+  /* prettylights-syntax-entity */
+  color: #6f42c1
+}.cdex-syn-github .hljs-attr, .cdex-syn-github .hljs-attribute, .cdex-syn-github .hljs-literal, .cdex-syn-github .hljs-meta, .cdex-syn-github .hljs-number, .cdex-syn-github .hljs-operator, .cdex-syn-github .hljs-variable, .cdex-syn-github .hljs-selector-attr, .cdex-syn-github .hljs-selector-class, .cdex-syn-github .hljs-selector-id{
+  /* prettylights-syntax-constant */
+  color: #005cc5
+}.cdex-syn-github .hljs-regexp, .cdex-syn-github .hljs-string, .cdex-syn-github .hljs-meta .hljs-string{
+  /* prettylights-syntax-string */
+  color: #032f62
+}.cdex-syn-github .hljs-built_in, .cdex-syn-github .hljs-symbol{
+  /* prettylights-syntax-variable */
+  color: #e36209
+}.cdex-syn-github .hljs-comment, .cdex-syn-github .hljs-code, .cdex-syn-github .hljs-formula{
+  /* prettylights-syntax-comment */
+  color: #6a737d
+}.cdex-syn-github .hljs-name, .cdex-syn-github .hljs-quote, .cdex-syn-github .hljs-selector-tag, .cdex-syn-github .hljs-selector-pseudo{
+  /* prettylights-syntax-entity-tag */
+  color: #22863a
+}.cdex-syn-github .hljs-subst{
+  /* prettylights-syntax-storage-modifier-import */
+  color: #24292e
+}.cdex-syn-github .hljs-section{
+  /* prettylights-syntax-markup-heading */
+  color: #005cc5;
+  font-weight: bold
+}.cdex-syn-github .hljs-bullet{
+  /* prettylights-syntax-markup-list */
+  color: #735c0f
+}.cdex-syn-github .hljs-emphasis{
+  /* prettylights-syntax-markup-italic */
+  color: #24292e;
+  font-style: italic
+}.cdex-syn-github .hljs-strong{
+  /* prettylights-syntax-markup-bold */
+  color: #24292e;
+  font-weight: bold
+}.cdex-syn-github .hljs-addition{
+  /* prettylights-syntax-markup-inserted */
+  color: #22863a;
+ }.cdex-syn-github .hljs-deletion{
+  /* prettylights-syntax-markup-deleted */
+  color: #b31d28;
+ }.cdex-syn-github .hljs-char.escape_, .cdex-syn-github .hljs-link, .cdex-syn-github .hljs-params, .cdex-syn-github .hljs-property, .cdex-syn-github .hljs-punctuation, .cdex-syn-github .hljs-tag{
+  /* purposely ignored */
+  
+}
+
+/* ===== github-dark ===== */
+.cdex-syn-github-dark pre code.hljs{
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}.cdex-syn-github-dark code.hljs{
+  padding: 3px 5px
+}/*!
+  Theme: GitHub Dark
+  Description: Dark theme as seen on github.com
+  Author: github.com
+  Maintainer: @Hirse
+  Updated: 2021-05-15
+
+  Outdated base version: https://github.com/primer/github-syntax-dark
+  Current colors taken from GitHub's CSS
+*/
+.hljs{
+  color: #c9d1d9;
+  background: #0d1117
+}.cdex-syn-github-dark .hljs-doctag, .cdex-syn-github-dark .hljs-keyword, .cdex-syn-github-dark .hljs-meta .hljs-keyword, .cdex-syn-github-dark .hljs-template-tag, .cdex-syn-github-dark .hljs-template-variable, .cdex-syn-github-dark .hljs-type, .cdex-syn-github-dark .hljs-variable.language_{
+  /* prettylights-syntax-keyword */
+  color: #ff7b72
+}.cdex-syn-github-dark .hljs-title, .cdex-syn-github-dark .hljs-title.class_, .cdex-syn-github-dark .hljs-title.class_.inherited__, .cdex-syn-github-dark .hljs-title.function_{
+  /* prettylights-syntax-entity */
+  color: #d2a8ff
+}.cdex-syn-github-dark .hljs-attr, .cdex-syn-github-dark .hljs-attribute, .cdex-syn-github-dark .hljs-literal, .cdex-syn-github-dark .hljs-meta, .cdex-syn-github-dark .hljs-number, .cdex-syn-github-dark .hljs-operator, .cdex-syn-github-dark .hljs-variable, .cdex-syn-github-dark .hljs-selector-attr, .cdex-syn-github-dark .hljs-selector-class, .cdex-syn-github-dark .hljs-selector-id{
+  /* prettylights-syntax-constant */
+  color: #79c0ff
+}.cdex-syn-github-dark .hljs-regexp, .cdex-syn-github-dark .hljs-string, .cdex-syn-github-dark .hljs-meta .hljs-string{
+  /* prettylights-syntax-string */
+  color: #a5d6ff
+}.cdex-syn-github-dark .hljs-built_in, .cdex-syn-github-dark .hljs-symbol{
+  /* prettylights-syntax-variable */
+  color: #ffa657
+}.cdex-syn-github-dark .hljs-comment, .cdex-syn-github-dark .hljs-code, .cdex-syn-github-dark .hljs-formula{
+  /* prettylights-syntax-comment */
+  color: #8b949e
+}.cdex-syn-github-dark .hljs-name, .cdex-syn-github-dark .hljs-quote, .cdex-syn-github-dark .hljs-selector-tag, .cdex-syn-github-dark .hljs-selector-pseudo{
+  /* prettylights-syntax-entity-tag */
+  color: #7ee787
+}.cdex-syn-github-dark .hljs-subst{
+  /* prettylights-syntax-storage-modifier-import */
+  color: #c9d1d9
+}.cdex-syn-github-dark .hljs-section{
+  /* prettylights-syntax-markup-heading */
+  color: #1f6feb;
+  font-weight: bold
+}.cdex-syn-github-dark .hljs-bullet{
+  /* prettylights-syntax-markup-list */
+  color: #f2cc60
+}.cdex-syn-github-dark .hljs-emphasis{
+  /* prettylights-syntax-markup-italic */
+  color: #c9d1d9;
+  font-style: italic
+}.cdex-syn-github-dark .hljs-strong{
+  /* prettylights-syntax-markup-bold */
+  color: #c9d1d9;
+  font-weight: bold
+}.cdex-syn-github-dark .hljs-addition{
+  /* prettylights-syntax-markup-inserted */
+  color: #aff5b4;
+ }.cdex-syn-github-dark .hljs-deletion{
+  /* prettylights-syntax-markup-deleted */
+  color: #ffdcd7;
+ }.cdex-syn-github-dark .hljs-char.escape_, .cdex-syn-github-dark .hljs-link, .cdex-syn-github-dark .hljs-params, .cdex-syn-github-dark .hljs-property, .cdex-syn-github-dark .hljs-punctuation, .cdex-syn-github-dark .hljs-tag{
+  /* purposely ignored */
+  
+}
+
+/* ===== atom-one-dark ===== */
+.cdex-syn-atom-one-dark pre code.hljs{
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}.cdex-syn-atom-one-dark code.hljs{
+  padding: 3px 5px
+}/*
+
+Atom One Dark by Daniel Gamage
+Original One Dark Syntax theme from https://github.com/atom/one-dark-syntax
+
+base:    #282c34
+mono-1:  #abb2bf
+mono-2:  #818896
+mono-3:  #5c6370
+hue-1:   #56b6c2
+hue-2:   #61aeee
+hue-3:   #c678dd
+hue-4:   #98c379
+hue-5:   #e06c75
+hue-5-2: #be5046
+hue-6:   #d19a66
+hue-6-2: #e6c07b
+
+*/
+.hljs{
+  color: #abb2bf;
+  background: #282c34
+}.cdex-syn-atom-one-dark .hljs-comment, .cdex-syn-atom-one-dark .hljs-quote{
+  color: #5c6370;
+  font-style: italic
+}.cdex-syn-atom-one-dark .hljs-doctag, .cdex-syn-atom-one-dark .hljs-keyword, .cdex-syn-atom-one-dark .hljs-formula{
+  color: #c678dd
+}.cdex-syn-atom-one-dark .hljs-section, .cdex-syn-atom-one-dark .hljs-name, .cdex-syn-atom-one-dark .hljs-selector-tag, .cdex-syn-atom-one-dark .hljs-deletion, .cdex-syn-atom-one-dark .hljs-subst{
+  color: #e06c75
+}.cdex-syn-atom-one-dark .hljs-literal{
+  color: #56b6c2
+}.cdex-syn-atom-one-dark .hljs-string, .cdex-syn-atom-one-dark .hljs-regexp, .cdex-syn-atom-one-dark .hljs-addition, .cdex-syn-atom-one-dark .hljs-attribute, .cdex-syn-atom-one-dark .hljs-meta .hljs-string{
+  color: #98c379
+}.cdex-syn-atom-one-dark .hljs-attr, .cdex-syn-atom-one-dark .hljs-variable, .cdex-syn-atom-one-dark .hljs-template-variable, .cdex-syn-atom-one-dark .hljs-type, .cdex-syn-atom-one-dark .hljs-selector-class, .cdex-syn-atom-one-dark .hljs-selector-attr, .cdex-syn-atom-one-dark .hljs-selector-pseudo, .cdex-syn-atom-one-dark .hljs-number{
+  color: #d19a66
+}.cdex-syn-atom-one-dark .hljs-symbol, .cdex-syn-atom-one-dark .hljs-bullet, .cdex-syn-atom-one-dark .hljs-link, .cdex-syn-atom-one-dark .hljs-meta, .cdex-syn-atom-one-dark .hljs-selector-id, .cdex-syn-atom-one-dark .hljs-title{
+  color: #61aeee
+}.cdex-syn-atom-one-dark .hljs-built_in, .cdex-syn-atom-one-dark .hljs-title.class_, .cdex-syn-atom-one-dark .hljs-class .hljs-title{
+  color: #e6c07b
+}.cdex-syn-atom-one-dark .hljs-emphasis{
+  font-style: italic
+}.cdex-syn-atom-one-dark .hljs-strong{
+  font-weight: bold
+}.cdex-syn-atom-one-dark .hljs-link{
+  text-decoration: underline
+}
+
+/* ===== atom-one-light ===== */
+.cdex-syn-atom-one-light pre code.hljs{
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}.cdex-syn-atom-one-light code.hljs{
+  padding: 3px 5px
+}/*
+
+Atom One Light by Daniel Gamage
+Original One Light Syntax theme from https://github.com/atom/one-light-syntax
+
+base:    #fafafa
+mono-1:  #383a42
+mono-2:  #686b77
+mono-3:  #a0a1a7
+hue-1:   #0184bb
+hue-2:   #4078f2
+hue-3:   #a626a4
+hue-4:   #50a14f
+hue-5:   #e45649
+hue-5-2: #c91243
+hue-6:   #986801
+hue-6-2: #c18401
+
+*/
+.hljs{
+  color: #383a42;
+  background: #fafafa
+}.cdex-syn-atom-one-light .hljs-comment, .cdex-syn-atom-one-light .hljs-quote{
+  color: #a0a1a7;
+  font-style: italic
+}.cdex-syn-atom-one-light .hljs-doctag, .cdex-syn-atom-one-light .hljs-keyword, .cdex-syn-atom-one-light .hljs-formula{
+  color: #a626a4
+}.cdex-syn-atom-one-light .hljs-section, .cdex-syn-atom-one-light .hljs-name, .cdex-syn-atom-one-light .hljs-selector-tag, .cdex-syn-atom-one-light .hljs-deletion, .cdex-syn-atom-one-light .hljs-subst{
+  color: #e45649
+}.cdex-syn-atom-one-light .hljs-literal{
+  color: #0184bb
+}.cdex-syn-atom-one-light .hljs-string, .cdex-syn-atom-one-light .hljs-regexp, .cdex-syn-atom-one-light .hljs-addition, .cdex-syn-atom-one-light .hljs-attribute, .cdex-syn-atom-one-light .hljs-meta .hljs-string{
+  color: #50a14f
+}.cdex-syn-atom-one-light .hljs-attr, .cdex-syn-atom-one-light .hljs-variable, .cdex-syn-atom-one-light .hljs-template-variable, .cdex-syn-atom-one-light .hljs-type, .cdex-syn-atom-one-light .hljs-selector-class, .cdex-syn-atom-one-light .hljs-selector-attr, .cdex-syn-atom-one-light .hljs-selector-pseudo, .cdex-syn-atom-one-light .hljs-number{
+  color: #986801
+}.cdex-syn-atom-one-light .hljs-symbol, .cdex-syn-atom-one-light .hljs-bullet, .cdex-syn-atom-one-light .hljs-link, .cdex-syn-atom-one-light .hljs-meta, .cdex-syn-atom-one-light .hljs-selector-id, .cdex-syn-atom-one-light .hljs-title{
+  color: #4078f2
+}.cdex-syn-atom-one-light .hljs-built_in, .cdex-syn-atom-one-light .hljs-title.class_, .cdex-syn-atom-one-light .hljs-class .hljs-title{
+  color: #c18401
+}.cdex-syn-atom-one-light .hljs-emphasis{
+  font-style: italic
+}.cdex-syn-atom-one-light .hljs-strong{
+  font-weight: bold
+}.cdex-syn-atom-one-light .hljs-link{
+  text-decoration: underline
+}
+
+/* ===== monokai ===== */
+.cdex-syn-monokai pre code.hljs{
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}.cdex-syn-monokai code.hljs{
+  padding: 3px 5px
+}/*
+Monokai style - ported by Luigi Maselli - http://grigio.org
+*/
+.hljs{
+  background: #272822;
+  color: #ddd
+}.cdex-syn-monokai .hljs-tag, .cdex-syn-monokai .hljs-keyword, .cdex-syn-monokai .hljs-selector-tag, .cdex-syn-monokai .hljs-literal, .cdex-syn-monokai .hljs-strong, .cdex-syn-monokai .hljs-number, .cdex-syn-monokai .hljs-name{
+  color: #f92672
+}.cdex-syn-monokai .hljs-code{
+  color: #66d9ef
+}.cdex-syn-monokai .hljs-attribute, .cdex-syn-monokai .hljs-attr, .cdex-syn-monokai .hljs-symbol, .cdex-syn-monokai .hljs-regexp, .cdex-syn-monokai .hljs-link{
+  color: #bf79db
+}.cdex-syn-monokai .hljs-string, .cdex-syn-monokai .hljs-bullet, .cdex-syn-monokai .hljs-subst, .cdex-syn-monokai .hljs-title, .cdex-syn-monokai .hljs-section, .cdex-syn-monokai .hljs-emphasis, .cdex-syn-monokai .hljs-type, .cdex-syn-monokai .hljs-built_in, .cdex-syn-monokai .hljs-selector-attr, .cdex-syn-monokai .hljs-selector-pseudo, .cdex-syn-monokai .hljs-addition, .cdex-syn-monokai .hljs-variable, .cdex-syn-monokai .hljs-template-tag, .cdex-syn-monokai .hljs-template-variable{
+  color: #a6e22e
+}.cdex-syn-monokai .hljs-title.class_, .cdex-syn-monokai .hljs-class .hljs-title{
+  color: white
+}.cdex-syn-monokai .hljs-comment, .cdex-syn-monokai .hljs-quote, .cdex-syn-monokai .hljs-deletion, .cdex-syn-monokai .hljs-meta{
+  color: #75715e
+}.cdex-syn-monokai .hljs-keyword, .cdex-syn-monokai .hljs-selector-tag, .cdex-syn-monokai .hljs-literal, .cdex-syn-monokai .hljs-doctag, .cdex-syn-monokai .hljs-title, .cdex-syn-monokai .hljs-section, .cdex-syn-monokai .hljs-type, .cdex-syn-monokai .hljs-selector-id{
+  font-weight: bold
+}
+
+/* ===== dracula ===== */
+/* Dracula Theme v1.2.5
+ *
+ * https://github.com/dracula/highlightjs
+ *
+ * Copyright 2016-present, All rights reserved
+ *
+ * Code licensed under the MIT license
+ *
+ * @author Denis Ciccale <dciccale@gmail.com>
+ * @author Zeno Rocha <hi@zenorocha.com>
+ */
+
+.hljs{
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #282a36;
+}.cdex-syn-dracula .hljs-built_in, .cdex-syn-dracula .hljs-selector-tag, .cdex-syn-dracula .hljs-section, .cdex-syn-dracula .hljs-link{
+  color: #8be9fd;
+}.cdex-syn-dracula .hljs-keyword{
+  color: #ff79c6;
+}.cdex-syn-dracula .hljs, .cdex-syn-dracula .hljs-subst{
+  color: #f8f8f2;
+}.cdex-syn-dracula .hljs-title, .cdex-syn-dracula .hljs-attr, .cdex-syn-dracula .hljs-meta-keyword{
+  font-style: italic;
+  color: #50fa7b;
+}.cdex-syn-dracula .hljs-string, .cdex-syn-dracula .hljs-meta, .cdex-syn-dracula .hljs-name, .cdex-syn-dracula .hljs-type, .cdex-syn-dracula .hljs-symbol, .cdex-syn-dracula .hljs-bullet, .cdex-syn-dracula .hljs-addition, .cdex-syn-dracula .hljs-variable, .cdex-syn-dracula .hljs-template-tag, .cdex-syn-dracula .hljs-template-variable{
+  color: #f1fa8c;
+}.cdex-syn-dracula .hljs-comment, .cdex-syn-dracula .hljs-quote, .cdex-syn-dracula .hljs-deletion{
+  color: #6272a4;
+}.cdex-syn-dracula .hljs-keyword, .cdex-syn-dracula .hljs-selector-tag, .cdex-syn-dracula .hljs-literal, .cdex-syn-dracula .hljs-title, .cdex-syn-dracula .hljs-section, .cdex-syn-dracula .hljs-doctag, .cdex-syn-dracula .hljs-type, .cdex-syn-dracula .hljs-name, .cdex-syn-dracula .hljs-strong{
+  font-weight: bold;
+}.cdex-syn-dracula .hljs-literal, .cdex-syn-dracula .hljs-number{
+  color: #bd93f9;
+}.cdex-syn-dracula .hljs-emphasis{
+  font-style: italic;
+}
+
+
+/* ===== nord ===== */
+.cdex-syn-nord pre code.hljs{
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}.cdex-syn-nord code.hljs{
+  padding: 3px 5px
+}/*
+ * Copyright (c) 2017-present Arctic Ice Studio <development@arcticicestudio.com>
+ * Copyright (c) 2017-present Sven Greb <development@svengreb.de>
+ *
+ * Project:    Nord highlight.js
+ * Version:    0.1.0
+ * Repository: https://github.com/arcticicestudio/nord-highlightjs
+ * License:    MIT
+ * References:
+ *   https://github.com/arcticicestudio/nord
+ */
+/*
+
+Polar Night
+
+#2E3440
+#3B4252
+#434C5E
+#4C566A
+
+Snow Storm
+
+#D8DEE9
+#E5E9F0
+#ECEFF4
+
+Frost
+
+#8FBCBB
+#88C0D0
+#81A1C1
+#5E81AC
+
+Aurora
+
+#BF616A
+#D08770
+#EBCB8B
+#A3BE8C
+#B48EAD
+
+*/
+.hljs{
+  background: #2E3440
+}.cdex-syn-nord .hljs, .cdex-syn-nord .hljs-subst{
+  color: #D8DEE9
+}.cdex-syn-nord .hljs-selector-tag{
+  color: #81A1C1
+}.cdex-syn-nord .hljs-selector-id{
+  color: #8FBCBB;
+  font-weight: bold
+}.cdex-syn-nord .hljs-selector-class{
+  color: #8FBCBB
+}.cdex-syn-nord .hljs-selector-attr{
+  color: #8FBCBB
+}.cdex-syn-nord .hljs-property{
+  color: #88C0D0
+}.cdex-syn-nord .hljs-selector-pseudo{
+  color: #88C0D0
+}.cdex-syn-nord .hljs-addition{
+ }.cdex-syn-nord .hljs-deletion{
+ }.cdex-syn-nord .hljs-built_in, .cdex-syn-nord .hljs-type{
+  color: #8FBCBB
+}.cdex-syn-nord .hljs-class{
+  color: #8FBCBB
+}.cdex-syn-nord .hljs-function{
+  color: #88C0D0
+}.cdex-syn-nord .hljs-title.hljs-function, .cdex-syn-nord .hljs-function > .hljs-title{
+  color: #88C0D0
+}.cdex-syn-nord .hljs-keyword, .cdex-syn-nord .hljs-literal, .cdex-syn-nord .hljs-symbol{
+  color: #81A1C1
+}.cdex-syn-nord .hljs-number{
+  color: #B48EAD
+}.cdex-syn-nord .hljs-regexp{
+  color: #EBCB8B
+}.cdex-syn-nord .hljs-string{
+  color: #A3BE8C
+}.cdex-syn-nord .hljs-title{
+  color: #8FBCBB
+}.cdex-syn-nord .hljs-params{
+  color: #D8DEE9
+}.cdex-syn-nord .hljs-bullet{
+  color: #81A1C1
+}.cdex-syn-nord .hljs-code{
+  color: #8FBCBB
+}.cdex-syn-nord .hljs-emphasis{
+  font-style: italic
+}.cdex-syn-nord .hljs-formula{
+  color: #8FBCBB
+}.cdex-syn-nord .hljs-strong{
+  font-weight: bold
+}.cdex-syn-nord .hljs-link:hover{
+  text-decoration: underline
+}.cdex-syn-nord .hljs-quote{
+  color: #4C566A
+}.cdex-syn-nord .hljs-comment{
+  color: #4C566A
+}.cdex-syn-nord .hljs-doctag{
+  color: #8FBCBB
+}.cdex-syn-nord .hljs-meta, .cdex-syn-nord .hljs-meta .hljs-keyword{
+  color: #5E81AC
+}.cdex-syn-nord .hljs-meta .hljs-string{
+  color: #A3BE8C
+}.cdex-syn-nord .hljs-attr{
+  color: #8FBCBB
+}.cdex-syn-nord .hljs-attribute{
+  color: #D8DEE9
+}.cdex-syn-nord .hljs-name{
+  color: #81A1C1
+}.cdex-syn-nord .hljs-section{
+  color: #88C0D0
+}.cdex-syn-nord .hljs-tag{
+  color: #81A1C1
+}.cdex-syn-nord .hljs-variable{
+  color: #D8DEE9
+}.cdex-syn-nord .hljs-template-variable{
+  color: #D8DEE9
+}.cdex-syn-nord .hljs-template-tag{
+  color: #5E81AC
+}/* per language customizations */
+.language-abnf .hljs-attribute{
+  color: #88C0D0
+}.cdex-syn-nord .language-abnf .hljs-symbol{
+  color: #EBCB8B
+}.cdex-syn-nord .language-apache .hljs-attribute{
+  color: #88C0D0
+}.cdex-syn-nord .language-apache .hljs-section{
+  color: #81A1C1
+}.cdex-syn-nord .language-arduino .hljs-built_in{
+  color: #88C0D0
+}.cdex-syn-nord .language-aspectj .hljs-meta{
+  color: #D08770
+}.cdex-syn-nord .language-aspectj > .hljs-title{
+  color: #88C0D0
+}.cdex-syn-nord .language-bnf .hljs-attribute{
+  color: #8FBCBB
+}.cdex-syn-nord .language-clojure .hljs-name{
+  color: #88C0D0
+}.cdex-syn-nord .language-clojure .hljs-symbol{
+  color: #EBCB8B
+}.cdex-syn-nord .language-coq .hljs-built_in{
+  color: #88C0D0
+}.cdex-syn-nord .language-cpp .hljs-meta .hljs-string{
+  color: #8FBCBB
+}.cdex-syn-nord .language-css .hljs-built_in{
+  color: #88C0D0
+}.cdex-syn-nord .language-css .hljs-keyword{
+  color: #D08770
+}.cdex-syn-nord .language-diff .hljs-meta{
+  color: #8FBCBB
+}.cdex-syn-nord .language-ebnf .hljs-attribute{
+  color: #8FBCBB
+}.cdex-syn-nord .language-glsl .hljs-built_in{
+  color: #88C0D0
+}.cdex-syn-nord .language-groovy .hljs-meta:not(:first-child){
+  color: #D08770
+}.cdex-syn-nord .language-haxe .hljs-meta{
+  color: #D08770
+}.cdex-syn-nord .language-java .hljs-meta{
+  color: #D08770
+}.cdex-syn-nord .language-ldif .hljs-attribute{
+  color: #8FBCBB
+}.cdex-syn-nord .language-lisp .hljs-name{
+  color: #88C0D0
+}.cdex-syn-nord .language-lua .hljs-built_in{
+  color: #88C0D0
+}.cdex-syn-nord .language-moonscript .hljs-built_in{
+  color: #88C0D0
+}.cdex-syn-nord .language-nginx .hljs-attribute{
+  color: #88C0D0
+}.cdex-syn-nord .language-nginx .hljs-section{
+  color: #5E81AC
+}.cdex-syn-nord .language-pf .hljs-built_in{
+  color: #88C0D0
+}.cdex-syn-nord .language-processing .hljs-built_in{
+  color: #88C0D0
+}.cdex-syn-nord .language-scss .hljs-keyword{
+  color: #81A1C1
+}.cdex-syn-nord .language-stylus .hljs-keyword{
+  color: #81A1C1
+}.cdex-syn-nord .language-swift .hljs-meta{
+  color: #D08770
+}.cdex-syn-nord .language-vim .hljs-built_in{
+  color: #88C0D0;
+  font-style: italic
+}.cdex-syn-nord .language-yaml .hljs-meta{
+  color: #D08770
+}
+
+/* ===== vs ===== */
+.cdex-syn-vs pre code.hljs{
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}.cdex-syn-vs code.hljs{
+  padding: 3px 5px
+}/*
+
+Visual Studio-like style based on original C# coloring by Jason Diamond <jason@diamond.name>
+
+*/
+.hljs{
+  background: white;
+  color: black
+}.cdex-syn-vs .hljs-comment, .cdex-syn-vs .hljs-quote, .cdex-syn-vs .hljs-variable{
+  color: #008000
+}.cdex-syn-vs .hljs-keyword, .cdex-syn-vs .hljs-selector-tag, .cdex-syn-vs .hljs-built_in, .cdex-syn-vs .hljs-name, .cdex-syn-vs .hljs-tag{
+  color: #00f
+}.cdex-syn-vs .hljs-string, .cdex-syn-vs .hljs-title, .cdex-syn-vs .hljs-section, .cdex-syn-vs .hljs-attribute, .cdex-syn-vs .hljs-literal, .cdex-syn-vs .hljs-template-tag, .cdex-syn-vs .hljs-template-variable, .cdex-syn-vs .hljs-type, .cdex-syn-vs .hljs-addition{
+  color: #a31515
+}.cdex-syn-vs .hljs-deletion, .cdex-syn-vs .hljs-selector-attr, .cdex-syn-vs .hljs-selector-pseudo, .cdex-syn-vs .hljs-meta{
+  color: #2b91af
+}.cdex-syn-vs .hljs-doctag{
+  color: #808080
+}.cdex-syn-vs .hljs-attr{
+  color: #f00
+}.cdex-syn-vs .hljs-symbol, .cdex-syn-vs .hljs-bullet, .cdex-syn-vs .hljs-link{
+  color: #00b0e8
+}.cdex-syn-vs .hljs-emphasis{
+  font-style: italic
+}.cdex-syn-vs .hljs-strong{
+  font-weight: bold
+}
+
+/* ===== vs2015 ===== */
+.cdex-syn-vs2015 pre code.hljs{
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}.cdex-syn-vs2015 code.hljs{
+  padding: 3px 5px
+}/*
+ * Visual Studio 2015 dark style
+ * Author: Nicolas LLOBERA <nllobera@gmail.com>
+ */
+.hljs{
+  background: #1E1E1E;
+  color: #DCDCDC
+}.cdex-syn-vs2015 .hljs-keyword, .cdex-syn-vs2015 .hljs-literal, .cdex-syn-vs2015 .hljs-symbol, .cdex-syn-vs2015 .hljs-name{
+  color: #569CD6
+}.cdex-syn-vs2015 .hljs-link{
+  color: #569CD6;
+  text-decoration: underline
+}.cdex-syn-vs2015 .hljs-built_in, .cdex-syn-vs2015 .hljs-type{
+  color: #4EC9B0
+}.cdex-syn-vs2015 .hljs-number, .cdex-syn-vs2015 .hljs-class{
+  color: #B8D7A3
+}.cdex-syn-vs2015 .hljs-string, .cdex-syn-vs2015 .hljs-meta .hljs-string{
+  color: #D69D85
+}.cdex-syn-vs2015 .hljs-regexp, .cdex-syn-vs2015 .hljs-template-tag{
+  color: #9A5334
+}.cdex-syn-vs2015 .hljs-subst, .cdex-syn-vs2015 .hljs-function, .cdex-syn-vs2015 .hljs-title, .cdex-syn-vs2015 .hljs-params, .cdex-syn-vs2015 .hljs-formula{
+  color: #DCDCDC
+}.cdex-syn-vs2015 .hljs-comment, .cdex-syn-vs2015 .hljs-quote{
+  color: #57A64A;
+  font-style: italic
+}.cdex-syn-vs2015 .hljs-doctag{
+  color: #608B4E
+}.cdex-syn-vs2015 .hljs-meta, .cdex-syn-vs2015 .hljs-meta .hljs-keyword, .cdex-syn-vs2015 .hljs-tag{
+  color: #9B9B9B
+}.cdex-syn-vs2015 .hljs-variable, .cdex-syn-vs2015 .hljs-template-variable{
+  color: #BD63C5
+}.cdex-syn-vs2015 .hljs-attr, .cdex-syn-vs2015 .hljs-attribute{
+  color: #9CDCFE
+}.cdex-syn-vs2015 .hljs-section{
+  color: gold
+}.cdex-syn-vs2015 .hljs-emphasis{
+  font-style: italic
+}.cdex-syn-vs2015 .hljs-strong{
+  font-weight: bold
+}/*.hljs-code{
+  font-family:'Monospace';
+}.cdex-syn-vs2015 */
+.hljs-bullet, .cdex-syn-vs2015 .hljs-selector-tag, .cdex-syn-vs2015 .hljs-selector-id, .cdex-syn-vs2015 .hljs-selector-class, .cdex-syn-vs2015 .hljs-selector-attr, .cdex-syn-vs2015 .hljs-selector-pseudo{
+  color: #D7BA7D
+}.cdex-syn-vs2015 .hljs-addition{
+ 
+  display: inline-block;
+  width: 100%
+}.cdex-syn-vs2015 .hljs-deletion{
+ 
+  display: inline-block;
+  width: 100%
+}
+
+/* ===== tokyo-night-dark ===== */
+.cdex-syn-tokyo-night-dark pre code.hljs{
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}.cdex-syn-tokyo-night-dark code.hljs{
+  padding: 3px 5px
+}/*!
+  Theme: Tokyo-night-Dark
+  origin: https://github.com/enkia/tokyo-night-vscode-theme
+  Description: Original highlight.js style
+  Author: (c) Henri Vandersleyen <hvandersleyen@gmail.com>
+  License: see project LICENSE
+  Touched: 2022
+*/
+/*  Comment */
+.hljs-meta,
+.hljs-comment{
+  color: #565f89
+}/* Red */
+/*INFO: This keyword, HTML elements, Regex group symbol, CSS units, Terminal Red */
+.hljs-tag,
+.hljs-doctag,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-template-tag,
+.hljs-selector-pseudo,
+.hljs-selector-attr,
+.hljs-variable.language_,
+.hljs-deletion{
+  color: #f7768e
+}/*Orange */
+/*INFO: Number and Boolean constants, Language support constants */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-number,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-link{
+  color: #ff9e64
+}/*  Yellow */
+/* INFO:  	Function parameters, Regex character sets, Terminal Yellow */
+.hljs-built_in,
+.hljs-attribute{
+  color: #e0af68
+}/* cyan */
+/* INFO: Language support functions, CSS HTML elements */
+.hljs-selector-tag{
+  color: #2ac3de
+}/* light blue */
+/* INFO: Object properties, Regex quantifiers and flags, Markdown headings, Terminal Cyan, Markdown code, Import/export keywords */
+.hljs-keyword,
+.hljs-title.function_,
+.hljs-title,
+.hljs-title.class_,
+.hljs-title.class_.inherited__,
+.hljs-subst,
+.hljs-property{
+  color: #7dcfff
+}/*Green*/
+/* INFO: Object literal keys, Markdown links, Terminal Green */
+.hljs-selector-tag{
+  color: #73daca
+}/*Green(er) */
+/* INFO: Strings, CSS class names */
+.hljs-quote,
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition{
+  color: #9ece6a
+}/* Blue */
+/* INFO:  	Function names, CSS property names, Terminal Blue */
+.hljs-code,
+.hljs-formula,
+.hljs-section{
+  color: #7aa2f7
+}/* Magenta */
+/*INFO: Control Keywords, Storage Types, Regex symbols and operators, HTML Attributes, Terminal Magenta */
+.hljs-name,
+.hljs-keyword,
+.hljs-operator,
+.hljs-keyword,
+.hljs-char.escape_,
+.hljs-attr{
+  color: #bb9af7
+}/* white*/
+/* INFO: Variables, Class names, Terminal White */
+.hljs-punctuation{
+  color: #c0caf5
+}.cdex-syn-tokyo-night-dark .hljs{
+ 
+  color: #9aa5ce
+}.cdex-syn-tokyo-night-dark .hljs-emphasis{
+  font-style: italic
+}.cdex-syn-tokyo-night-dark .hljs-strong{
+  font-weight: bold
+}

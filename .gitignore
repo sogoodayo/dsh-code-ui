@@ -44,3 +44,6 @@ _legacy-src/
 .md
 
 _pack-cache/
+
+# npm pack artifacts (release tarballs stay local)
+*.tgz

@@ -20,7 +20,7 @@
 | :---: | :---: |
 | ![会话头 ⌨ code UI 按钮](https://github.com/soGoodayo/dsh-code-ui/raw/main/image/%E4%BC%9A%E8%AF%9D%E5%A4%B4%E6%8C%89%E9%92%AE.png) | ![悬浮模式条](https://github.com/soGoodayo/dsh-code-ui/raw/main/image/%E6%82%AC%E6%B5%AE%E6%8C%89%E9%92%AE.png) |
 
-> 📍 **所有配置都在：设置 → 插件 → 插件列表 → dsh-code-ui 的配置卡片**——编辑器界面（右侧停靠 / 悬浮窗口 / 隐藏）、编辑器主题、切换按钮、启用开关、检查更新，切换即时生效并持久化保存。
+> 📍 **所有配置都在：设置 → 插件 → 插件列表 → dsh-code-ui 的配置卡片**——编辑器界面（右侧停靠 / 悬浮窗口 / 隐藏）、编辑器主题、语法配色、切换按钮、启用开关、检查更新，切换即时生效并持久化保存。
 
 ## 功能
 
@@ -30,7 +30,7 @@
 - **Cursor 风格工作区**：活动栏 + 文件树侧边栏 + 多标签页编辑器 + 状态栏
 - **侧栏收起与调宽**：« 按钮 / 📁 三态 / 拖到最窄自动收起，» 把手展开，右缘拖拽调宽
 - **停靠面板拖宽**：左缘手柄实时调整面板宽度，DSH 界面自动跟随
-- **语法高亮**：内联轻量 tokenizer，覆盖 JS/TS/Python/HTML/CSS 等，token 色随主题两套配色
+- **语法高亮**：highlight.js 11（193 种语言）替换自研 tokenizer——宿主路由懒加载不拖累启动，10 款语法配色可选（自动随明暗 / GitHub / Dracula / Monokai…），加载失败或桌面端自动回退内置轻量高亮
 - **文件浏览与编辑**：展开目录、打开文件、直接编辑、`Ctrl+S` 保存写回磁盘；外部修改自动同步
 - **选中代码右键**：
   - 📋 复制
@@ -42,6 +42,8 @@
 - **内嵌 AI 输入框**（悬浮布局）：直接输入、`Ctrl+Enter` 发送；发送时不粘贴引用正文，只附一行引用指针，内容由 AI 调用 `get_referenced_snippets` 工具读取
 - **主题四态**：跟随 DSH（默认）/ 跟随系统 / 浅色 / 深色，插件卡片切换
 - **以此文件夹为根**：文件浏览器里可选任意目录作为工作区根
+- **根目录按会话隔离**：切换对话自动换根，各会话的手动根互不污染；新建对话（未发消息）也能立即定位其工作区
+- **标签页右键菜单**：关闭 / 关闭其他 / 关闭右侧标签页 / 关闭已保存 / 关闭全部 / 复制路径；关闭未保存文件前确认（保存并关闭 / 不保存 / 取消，保存失败者保留打开）
 - **检查更新 / 一键更新**：设置 → 插件 → 插件列表 → dsh-code-ui 的配置卡片，支持在线检查 npm 新版本并一键更新；未发布/开发期可填本地 `.tgz` 路径安装（pnpm 流式进度展示，失败自动归类给出建议，完成后提示重启 DSH 生效）
 
 ## 安装
@@ -71,7 +73,7 @@ npm install dsh-code-ui
 
 ## 使用
 
-1. 点会话标题栏 `⌨ code UI` 按钮打开编辑器（默认右侧停靠；悬浮布局则用顶部悬浮模式条）
+1. 点顶部悬浮模式条的 `code UI` 打开编辑器（默认切换按钮；也可在插件卡片换成会话头 `⌨` 按钮），默认布局为右侧停靠
 2. 在文件树/浏览器里打开文件
 3. 选中代码右键 → 引用 / 翻译 / 备注 / 复制
 4. 悬浮布局底部输入框直接发消息（`Ctrl+Enter` 发送）；停靠布局用 DSH 原生输入条，引用只以标签显示，正文由 AI 工具读取
@@ -84,7 +86,10 @@ dsh-code-ui/
 ├── package.json      # 包声明（含 dsh.bundle.patch / dsh.client）
 ├── lib/
 │   ├── index.js      # Host 端：connection.rpc 文件/引用/备注 RPC + get_referenced_snippets 工具
-│   └── client.js     # Client 端：__ModuleLoader__ + 编辑器 UI
+│   │                 #        + webServer exact 路由（下发 lib/vendor 静态资产）
+│   ├── client.js     # Client 端：__ModuleLoader__ + 编辑器 UI（highlight.js 懒加载接线）
+│   └── vendor/       # highlight.js 全量包 + 作用域化主题 CSS（脚本生成，勿手改）
+├── tools/            # vendor 重建脚本：node tools/vendor-hljs.mjs [版本] [--themes-only]
 └── cordis.patch.yml  # bundle 插接层
 ```
 
@@ -92,6 +97,7 @@ dsh-code-ui/
 
 ## 实现说明
 
+- **语法高亮**：`lib/vendor/` 下为 highlight.js 全量包（core + 193 语言）与作用域化主题 CSS，由 `tools/vendor-hljs.mjs` 从 CDN 生成；宿主经 `webServer` 注册两个 exact 路由下发，客户端首次需要高亮时以 `<script>`/`<link>` 懒加载（绝不内联进 client.js），失败或 Electron（`file://`）自动回退内置轻量 tokenizer；重高亮带 ~60ms 防抖与 512KB 大文件降级。
 - **Host↔Client RPC**：Host 通过 `connection.rpc.handle("/dsh-code-ui", handler)` 注册文件系统/引用/备注端点；Client 通过 `connection.rpc.call("/dsh-code-ui", endpoint, payload)` 调用。RPC 返回值遵循 DSH 的 `RpcResult` 协议（`{ ok: true, value }` / `{ ok: false, error }`）。
 - **模型工具**：注册 `get_referenced_snippets`，让 AI 读取用户标记的代码片段。
 - **Client UI**：`window.__ModuleLoader__.load({ id, factory })` 注册，React 通过 `require("react")` 获取，slot 通过 `ctx.get("slots")` 注册（`shell.overlay`），样式用 `--dsw-alias-*` 主题变量。
@@ -108,6 +114,7 @@ dsh-code-ui/
 
 | 时间 | 版本 | 修复 / 新增 |
 | --- | --- | --- |
+| 2026-09-08 | v1.4.0 | 里程碑：**语法高亮升级 highlight.js 11**（193 种语言，替换自研 tokenizer）。宿主 `webServer` exact 路由下发 `lib/vendor/` 全量包与主题 CSS，客户端首次高亮时懒加载、不拖累 SPA 启动；Electron（file://）/断网/路由缺失自动回退原 tokenizer 保底可用。插件卡片新增「语法配色」：自动（默认，随编辑器明暗 GitHub ↔ GitHub Dark）+ 10 款固定主题（GitHub / Dracula / Monokai / Nord / VS…），仅染 token 色、编辑器底色仍归「编辑器主题」管理，切换即时生效并持久化。性能：重高亮 ~60ms 防抖 + >512KB 大文件自动降级轻量高亮。`tools/vendor-hljs.mjs` 重建管线入库（支持 `--themes-only`、fetch 超时重试、Dracula 取官方源）。兼容性：适配 dsh 0.1.2+ 新版 settings 服务——不再 import 已删除的 `installSettingsSection`/`settingsNamespace` 具名导出（具名导出缺失会让宿主启动即退出），照 dshmarket 内联 `register`/`watch` 接线（服务 API 新旧一致），旧宿主 0.1.0-rc.7+ 同样可跑。交互优化：文件树选中态改为实心选中色 + 选中文字反白 + 左缘 2px 白色强调条——底色跟随宿主 `--dsw-alias-button-info-fill` 令牌（与 dshUI「对话/轨迹」页签同源，回退 #4176e6），宿主换肤自动同步；原层级灰在浅色主题下与侧栏底色仅差 5/255，选中几乎隐形。文件树根目录**按会话隔离**：宿主以 sessionId→root 映射记忆各会话的手动根（「以此文件夹为根」只影响当前会话，不再全局污染），切换会话即解析新会话的 cwd 或其记忆根——修复「新会话打开仍是旧会话地址」（原手动根为宿主级全局变量，且客户端跟随标志不持久化导致刷新后跟随失效且无提示）。未发消息的新会话也能解析根目录：会话创建时所选工作区路径已写入不可变 `SessionHeader.cwd`，经 `sessions` 服务可查（原仅查 `agents`，agent 要到首条消息后才存在）；重启后重开旧对话（agent 尚未恢复）时经 `sessionController.inspect` 读持久化 header 兜底。空新对话（blank 会话）根因：宿主对 blank 会话隐藏会话头 chrome（hideChrome），插件 InputBridge 所在 slot 不渲染、捕获不到新会话 id——新增常驻 SessionWatch（root 作用域 `shell.overlay` + 标准 props `useSessions`）监听当前选中会话，blank 会话（宿主侧 agent 在 session/create 时即建、cwd=所选工作区）也能即时换根。标签页**右键菜单**：关闭 / 关闭其他 / 关闭右侧标签页 / 关闭已保存 / 关闭全部 + 复制路径（无对象项自动置灰）；关闭波及未保存文件时弹确认框（保存并关闭 / 不保存 / 取消，多文件列清单、>5 折叠计数，保存失败者保留打开）——原标签 ✕ 按钮静默丢弃未保存改动，一并接入同一确认流程 |
 | 2026-09-02 | v1.3.2 | 调整：**切换按钮默认改为悬浮模式条**（原会话头 ⌨ 按钮，已保存选择的用户不受影响）；**文件树默认根跟随当前会话的工作区目录**——打开编辑器即定位到当前对话的项目根，会话切换自动换根（有未保存文件时暂不跟随并提示，保存后点 ⟳ 即切换）；手动「以此文件夹为根」后不再自动跟随 |
 | 2026-09-02 | v1.3.1 | 调整：安装后编辑器**默认隐藏**（dsh UI，新装不自动占屏，⌨ / 模式条随时唤回），布局默认仍为右侧停靠；配置卡片「编辑器界面」三态说明与 README 措辞同步。新增：一键更新 / 本地包更新成功后按钮文案临时变为「需重启 DSH 生效」（置灰防误点）；README 增加「界面一览」（双布局与两种切换按钮截图）并明确配置入口路径（设置 → 插件 → 插件列表 → dsh-code-ui） |
 | 2026-09-02 | v1.3.0 | 新增：文件树右键操作（真实磁盘）。右键文件：打开 / 引用给 AI（整个文件）/ 复制路径 / 在资源管理器中显示 / 重命名 / 删除；右键文件夹：新建文件 / 新建文件夹 / 以此文件夹为根 / 刷新 / 复制路径 / 定位 / 重命名 / 删除（递归强确认）；空白区右键：根目录新建 / 刷新 / 更换根；新建重命名输入弹窗（Enter 确认）、危险操作确认弹窗、工作区根禁删；重命名自动同步标签页/缓冲/watcher，删除自动清理该路径下全部标签。引用体系升级：整文件引用只传绝对路径由 AI 自行读取；停靠布局下 DSH 原生输入条发送也自动附加引用指针（挂钩 submit，两布局统一）。配置卡片：「布局模式 × 界面模式」合并为三态「编辑器界面」（右侧停靠/悬浮窗口/隐藏 dsh UI，隐藏时记住布局）。打开文件弹窗：输入路径回车直接认定（文件夹=设为根 / 文件=打开）。提示条移至顶部居中、可拖拽自定位置（⠿ 把手）。右键菜单视口边界自适应、点击菜单项后自动关闭；⟳ 刷新不再折叠整棵树 |
