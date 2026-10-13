@@ -114,6 +114,7 @@ dsh-code-ui/
 
 | 时间 | 版本 | 修复 / 新增 |
 | --- | --- | --- |
+| 2026-10-13 | v1.6.6 | 修复：**选中 zip 等二进制文件页面卡死**——双重根因：① 编辑器对任何文件都按文本渲染，zip 经截断读取的 4MB 乱码进 tokenizer/highlight 层（数万 span）瞬间撑爆页面；现对已知二进制扩展名（zip/gz/tar/7z/jar/exe/dll/png/jpg/pdf/woff/ttf/mp3/mp4 等 40+ 种）直接跳过文本预览，打开只显示占位提示与只读备注。② v1.6.5 引入的已发消息着色观察器在大 DOM 上每次变动都全量遍历（文本节点级祖先匹配，无法剪枝），编辑器载入大文件后与聊天区流式输出叠加把主线程拖死；现改元素级剪枝（TreeWalker 对 textarea/pre/code/.cdex-workbench/.cdex-dock 等命中即整棵子树跳过）+ 单轮扫描超 80ms 自动进入 1.5s 冷却让出主线程 |
 | 2026-10-13 | v1.6.5 | 优化：**已发消息的引用标签着色**——chip 序列化进正文的 `N:文件名:起-止` / `🌐N:文件名` 标签在发出后以蓝色高亮展示（`--dsw-alias-state-business-primary`，与宿主输入框 chip 同色加粗），用户回看消息时能一眼看到引用了什么。实现：MutationObserver + TreeWalker 纯文本节点 overlay（只 split/wrap，不碰 React 管理结构；React 原位改文本时自愈 unwrap 重扫）；整文件引用强制要求扩展名（不误伤 `12:30` 时间文本），匹配点黏在更长单词内（`a2:app.ts:1-2`）跳过；跳过输入框/代码块/链接/宿主 chip 及本插件自有 UI 区域 |
 | 2026-10-13 | v1.6.4 | 优化：发送后消息**保留引用标签文本**——chip 序列化从「空串隐身」改为输出编号标签（`2:package.json:2-3` / `🌐4:package.json:26-32`），编号取发送时刻冻结的 seq；消息里看得见引用了什么，AI 侧仍经宿主 systemPrompt 动态 section（`code-ui-references`）获知全部引用并调 `get_referenced_snippets` 读取 |
 | 2026-10-13 | v1.6.3 | 优化：**引用指针不再出现在消息正文**——消息末尾的 `[code UI] 已标记 N 段代码引用…` 附加块整体移除（用户反馈：希望不展示出来但还让 AI 知道）；引用信息改由宿主 `systemPrompt` 动态 section（order 2950，按 session 头取 `lastRefBatches` 批次渲染）注入模型上下文，AI 对用户的观感不可见；客户端 chip serialize 返回空串、consumePendingRefs 每次发送带 `{ids, sessionId}` 调 `use-references`（空=清批次） |
