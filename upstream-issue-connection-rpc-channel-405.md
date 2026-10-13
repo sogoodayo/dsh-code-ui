@@ -117,3 +117,7 @@ scope exists; the caller's effect still owns the channel's lifetime.
   `tsconfig.base.json` paths resolve workspace packages to source).
 - `dsh-code-ui` (profile package, `ctx.inject(['connection'])`, plain ESM) and
   `dsh-context@0.46.0` (npm) both reproduce.
+
+## 2026-10 follow-up: plugin migrated away from `connection.rpc.handle` (v1.6+)
+
+dsh-code-ui no longer registers a custom channel via `connection.rpc.handle`. All endpoints moved to the official Typert Remote contract: a `CodeUiService` with `bindTypertRemote(this, "dsh-code-ui")` + `@Remote` markers is provided on the host root Context (`ctx.root.reflect.provide`), discovered by api-gateway's SRC scan, and invoked by the browser through `connection.rpc.call('/api', 'dsh-code-ui/<endpoint>', ...)`. The self-hosted fallback route and the 405 workarounds were removed. The upstream issue (Cordis guard in `rpc-host.ts register()`) is still valid for other plugins using `handle`, but no longer affects dsh-code-ui. The same code path works on host 0.1.5-rc.x and 0.2.0-rc.x.
